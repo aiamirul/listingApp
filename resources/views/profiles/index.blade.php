@@ -25,6 +25,7 @@
             </div>
 
             
+            
             @can('update', $user->profile)
                 <a href="/profile/{{ $user->id }}/edit">Edit Profile</a>
             @endcan

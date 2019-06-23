@@ -14,7 +14,7 @@
                 
                 
                 <input name="group" id="group" value="OUT"  hidden="true">    
- 
+  <input name="outstanding" id="outstanding" value="0"  hidden="true">    
                 <div class="form-group row">
                     <label for="Name" class="col-md-4 col-form-label">Name</label>
 
@@ -104,4 +104,7 @@
         </div>
     </form>
 </div>
+
+  <script src="vendor/datatables/jquery.dataTables.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 @endsection

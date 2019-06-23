@@ -30,10 +30,8 @@
           
                 
                   
-                        <td >   <h6>Position: {{ $post->position_col }}</h6>
-                           <h6>Location: {{ $post->location_col }}</h6>
-                               <h6>Company: {{ $post->company_col }}</h6>
-                                      <h6>Salary: RM{{ $post->caption }}</h6>
+                        <td >   <h6>{{ $post->caption }}</h6>
+                           
                 <a href="/p/{{ $post->id }}">
                     <button class='btn btn-info'>Apply</button>
                 </a>

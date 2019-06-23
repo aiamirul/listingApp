@@ -55,7 +55,6 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                                
                             @endif
                         @else
                             <li class="nav-item dropdown">
@@ -68,7 +67,9 @@
                                     <a class="dropdown-item" href="../../../../profile/{{ auth()->user()->id }}">       
                                         My Profile
                                     </a>
-                                  
+                                     <a class="dropdown-item" href="../../../../profile/{{ auth()->user()->id }}/translist">       
+                                        Transactions
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -102,7 +103,24 @@
         <ul class="sidebar navbar-nav"> 
 
 
-       
+          <li class="nav-item">
+            <a class="nav-link" href="../../../../profile/{{ auth()->user()->id }}">
+              <i class="fas fa-fw fa-tachometer-alt"></i>
+              <span>My Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-fw fa-folder"></i>
+              <span>Operations</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+
+              <a class="dropdown-item" href="../../../../profile/{{ auth()->user()->id }}/translist">Transactions</a>
+              
+              <a class="dropdown-item" href="../../../../profile/{{ auth()->user()->id }}/postlist">Posts</a>
+            </div>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="../../../../profile/{{ auth()->user()->id }}">
               <i class="fas fa-fw fa-folder-open"></i>
@@ -111,15 +129,8 @@
           <li class="nav-item">
             <a class="nav-link" href="../../../../profile/{{ auth()->user()->id }}/postlist">
               <i class="fas fa-fw fa-table"></i>
-              <span>My Ads List</span></a>
-          </li>
-        
-          <li class="nav-item">
-            <a class="nav-link" href="../../../../">
-              <i class="fas fa-fw fa-table"></i>
-              <span>Find Jobs</span></a>
-          </li>
-        </ul>
+              <span>Jobs List</span></a>
+          </li></ul>
 
 
     <div id="content-wrapper">

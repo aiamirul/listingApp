@@ -13,7 +13,7 @@
                     <h1>Edit Profile</h1>
                 </div>
                 <div class="form-group row">
-                    <label for="title" class="col-md-4 col-form-label">Title</label>
+                    <label for="title" class="col-md-4 col-form-label">Full Name</label>
 
                     <input id="title"
                            type="text"
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="description" class="col-md-4 col-form-label">Description</label>
+                    <label for="description" class="col-md-4 col-form-label">Education Level</label>
 
                     <input id="description"
                            type="text"
@@ -64,7 +64,7 @@
                 </div>
                 
                    <div class="form-group row">
-                    <label for="location" class="col-md-4 col-form-label">location</label>
+                    <label for="location" class="col-md-4 col-form-label">Experience</label>
 
                     <input id="location"
                            type="text"
@@ -82,7 +82,7 @@
                 
 
                 <div class="form-group row">
-                    <label for="url" class="col-md-4 col-form-label">URL</label>
+                    <label for="url" class="col-md-4 col-form-label">Language</label>
 
                     <input id="url"
                            type="text"
@@ -100,7 +100,7 @@
 
                 
                        <div class="form-group row">
-                    <label for="SSM" class="col-md-4 col-form-label">SSM</label>
+                    <label for="SSM" class="col-md-4 col-form-label">IC</label>
 
                     <input id="SSM"
                            type="text"
@@ -116,7 +116,7 @@
                     @endif
                 </div>
                   <div class="form-group row">
-                    <label for="Adress" class="col-md-4 col-form-label">Adress</label>
+                    <label for="Adress" class="col-md-4 col-form-label">Address</label>
 
                     <input id="Adress"
                            type="text"

@@ -122,6 +122,8 @@ class ProfilesController extends Controller
             'image' => '',
             'location' => '',
             'contact' => '',
+            'Adress' =>'',
+            'SSM' =>'',
         ]);
 
         if (request('image')) {

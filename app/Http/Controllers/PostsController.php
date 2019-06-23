@@ -21,6 +21,15 @@ class PostsController extends Controller
 
         return view('posts.index', compact('posts'));
     }
+    
+      public function allpost()
+    {
+       $users = \App\User::find(1)->pluck('users.id');
+
+        $posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(5);
+
+        return view('posts.index', compact('posts'));
+    }
 
     public function create()
     {
@@ -32,11 +41,13 @@ class PostsController extends Controller
         $data = request()->validate([
             'caption' => 'required',
             'image' => ['required', 'image'],
+            'location_col' => '',
+            'company_col' => '',
+            'position_col' => '',
         ]);
 
         $imagePath = request('image')->store('uploads', 'public');
        
-
         $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
         //dd($image);
        
@@ -44,6 +55,9 @@ class PostsController extends Controller
         auth()->user()->posts()->create([
             'caption' => $data['caption'],
             'image' => $imagePath,
+             'location_col' => $data['location_col'],
+            'company_col' => $data['company_col'],
+            'position_col' => $data['position_col'],
         ]);
         
         

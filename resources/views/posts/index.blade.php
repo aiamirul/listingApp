@@ -1,34 +1,74 @@
 @extends('layouts.boot')
 
 @section('content')
-<div class="container">
-    @foreach($posts as $post)
-        <div class="row">
-            <div class="col-6 offset-3">
-                <a href="/profile/{{ $post->user->id }}">
-                    <img src="/storage/{{ $post->image }}" class="w-100">
-                </a>
-            </div>
-        </div>
-        <div class="row pt-2 pb-4">
-            <div class="col-6 offset-3">
-                <div>
-                    <p>
-                    <span class="font-weight-bold">
-                        <a href="/profile/{{ $post->user->id }}">
-                            <span class="text-dark">{{ $post->user->username }}</span>
-                        </a>
-                    </span> {{ $post->caption }}
-                    </p>
-                </div>
-            </div>
-        </div>
-    @endforeach
 
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                {{ $posts->links() }}
+ 
+    
+        <!-- DataTables Example -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            List</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                  <tr>
+                    <th >List</th>
+                     <th >List</th>
+                  </tr>
+                </thead>
+       
+                <tbody>
+            
+                
+        
+        @foreach($posts as $post)
+         <tr>
+       
+          
+          
+                
+                  
+                        <td >   <h6>Position: {{ $post->position_col }}</h6>
+                           <h6>Location: {{ $post->location_col }}</h6>
+                               <h6>Company: {{ $post->company_col }}</h6>
+                                      <h6>Salary: RM{{ $post->caption }}</h6>
+                <a href="/p/{{ $post->id }}">
+                    <button class='btn btn-info'>Apply</button>
+                </a>
+             
+               
+              
+            </td>
+                        <td > <img src="/storage/{{ $post->image }}" class="img-fluid" ></td>
+                   
+         </tr>
+                 
+               
+       
+                    
+          
+                
+                
+                
+                   
+                 
+                  
+                  
+              
+                   
+        @endforeach
+        
+       
+        </tr>
+        
+                </tbody>
+              </table>
             </div>
-        </div>
-</div>
+          </div> </div>
+
+           
+        
+  
 @endsection

@@ -12,7 +12,7 @@
   <title>My App</title>
 
   <!-- Custom fonts for this template-->
-  <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+   <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
   <link href="{{ asset('vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
@@ -117,7 +117,7 @@
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
 
               <a class="dropdown-item" href="../../../../profile/{{ auth()->user()->id }}/translist">Transactions</a>
-              <a class="dropdown-item" href="../../../../profile/{{ auth()->user()->id }}/translist">Posts</a>
+              <a class="dropdown-item" href="../../../../profile/{{ auth()->user()->id }}/postlist">Posts</a>
             </div>
           </li>
           <li class="nav-item">
@@ -186,8 +186,15 @@
   <!-- Core plugin JavaScript-->
   <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
+  <!-- Page level plugin JavaScript-->
+  <script src="{{ asset('vendor/datatables/jquery.dataTables.js') }}"></script>
+  <script src="{{ asset('vendor/datatables/dataTables.bootstrap4.js') }}"></script>
+
   <!-- Custom scripts for all pages-->
   <script src="{{ asset('js/sb-admin.min.js') }}"></script>
+
+  <!-- Demo scripts for this page-->
+  <script src="{{ asset('js/demo/datatables-demo.js') }}"></script>
 
 </body>
 

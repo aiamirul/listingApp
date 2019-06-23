@@ -117,6 +117,7 @@
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
 
               <a class="dropdown-item" href="../../../../profile/{{ auth()->user()->id }}/translist">Transactions</a>
+              
               <a class="dropdown-item" href="../../../../profile/{{ auth()->user()->id }}/postlist">Posts</a>
             </div>
           </li>

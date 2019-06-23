@@ -1,6 +1,7 @@
 @extends('layouts.boot')
 @section('content')
 
+
         <!-- DataTables Example -->
         <div class="card mb-4">
           <div class="card-header">

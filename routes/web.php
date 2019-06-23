@@ -34,6 +34,7 @@ Route::patch('/edit/{post}/{user}', 'PostsController@update')->name('post.update
 
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/profile/{user}/translist', 'ProfilesController@translist')->name('profile.translist');
+Route::get('/profile/{user}/postlist', 'ProfilesController@postlist')->name('profile.postlist');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
 Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.update');
 
